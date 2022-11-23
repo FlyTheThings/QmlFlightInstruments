@@ -14,45 +14,48 @@ Window {
     minimumHeight: 600
     visibility: Window.Maximized
     title: "Miscellaneous Gauges Example"
-    color: "#ffffff"
+    color: "#000000"
 
-    GridLayout {
+
+    FontLoader { source: "Resources/Fonts/CenturyGothic.ttf" }
+
+
+    Grid {
         columns: 3
 
         anchors {
-            fill: parent
+            centerIn: parent
             margins: 16
         }
 
         TankGauge {
-            radius: 200
+            radius: 250
             leftTankFuel: pfd.leftTankFuel
             rightTankFuel: pfd.rightTankFuel
         }
 
         EgtFuelFlowGauge {
-            radius: 200
+            radius: 250
             egt: pfd.egt
             fuelFlow: pfd.fuelFlow
         }
 
         PropellerGauge {
-            radius: 200
+            radius: 250
             rpm: pfd.rpm
         }
 
 
         VacAmpGauge {
-            radius: 200
+            radius: 250
             vac: pfd.vac
             amp: pfd.amp
         }
 
         TemperaturePressureGauge {
-            radius: 200
+            radius: 250
             engineTemperature: pfd.engineTemperature
             enginePressure: pfd.enginePressure
         }
-
     }
 }
